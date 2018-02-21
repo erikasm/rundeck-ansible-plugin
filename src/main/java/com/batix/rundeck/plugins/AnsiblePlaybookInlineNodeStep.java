@@ -26,8 +26,8 @@ public class AnsiblePlaybookInlineNodeStep implements NodeStepPlugin, AnsibleDes
     static {
         DescriptionBuilder builder = DescriptionBuilder.builder();
         builder.name(SERVICE_PROVIDER_NAME);
-        builder.title("Ansible Playbook Inline");
-        builder.description("Runs an Inline Ansible Playbook.");
+        builder.title("Ansible Playbook Inline Node");
+        builder.description("Runs an Inline Ansible Playbook on a node.");
 
         builder.property(PLAYBOOK_INLINE_PROP);
         builder.property(EXTRA_VARS_PROP);

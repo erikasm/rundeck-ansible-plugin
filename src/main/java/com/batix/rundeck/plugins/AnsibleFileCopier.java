@@ -76,7 +76,7 @@ public class AnsibleFileCopier implements FileCopier, AnsibleDescribable {
     AnsibleRunner runner = null;
 
     //check if the node is a windows host
-    boolean windows=node.getAttributes().get("osFamily").toLowerCase().contains("windows");
+    boolean windows=node.getAttributes().getOrDefault("osFamily", "").toLowerCase().contains("windows");
 
     IRundeckProject project = context.getFramework().getFrameworkProjectMgr().getFrameworkProject(context.getFrameworkProject());
 

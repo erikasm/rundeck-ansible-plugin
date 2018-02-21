@@ -85,7 +85,7 @@ public class AnsibleNodeExecutor implements NodeExecutor, AnsibleDescribable {
     StringBuilder cmdArgs = new StringBuilder();
 
     //check if the node is a windows host
-    boolean windows=node.getAttributes().get("osFamily").toLowerCase().contains("windows");
+    boolean windows=node.getAttributes().getOrDefault("osFamily", "").toLowerCase().contains("windows");
 
     String executable = PropertyResolver.resolveProperty(
                           AnsibleDescribable.ANSIBLE_EXECUTABLE,
